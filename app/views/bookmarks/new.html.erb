@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-6">
-      <%= simple_form_for[@list, @bookmark] do |f| %>
+      <%= simple_form_for [@list, @bookmark] do |f| %>
         <%= f.association :movie, collection: Movie.all.order(:title), placeholder: "Select a movie"%>
         <%= f.input :comment %>
         <%= f.submit "Add movie" %>
