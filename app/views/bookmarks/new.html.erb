@@ -1,0 +1,14 @@
+<h1>Bookmarks#new</h1>
+<p>Find me in app/views/bookmarks/new.html.erb</p>
+<h3>Add a movie to this list</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <%= simple_form_for[@list, @bookmark] do |f| %>
+        <%= f.association :movie, collection: Movie.all.order(:title), placeholder: "Select a movie"%>
+        <%= f.input :comment %>
+        <%= f.submit "Add movie" %>
+      <% end %>
+    </div>
+  </div>
+</div>
